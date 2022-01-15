@@ -1,0 +1,38 @@
+﻿@model Info
+@{
+    ViewData["Title"] = "Update";
+}
+
+<row>
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update</h4>
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label asp-for="LeftHead"></label>
+                        <input asp-for="LeftHead" class="form-control" Contact>
+                        <span class="text-danger" asp-validation-for="LeftHead"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="LeftContent"></label>
+                        <input asp-for="LeftContent" class="form-control" Contact>
+                        <span class="text-danger" asp-validation-for="LeftContent"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RightContent"></label>
+                        <input asp-for="RightContent" class="form-control" Contact>
+                        <span class="text-danger" asp-validation-for="RightContent"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="RightDownContent"></label>
+                        <input asp-for="RightDownContent" class="form-control" Contact>
+                        <span class="text-danger" asp-validation-for="RightDownContent"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-dark" asp-action="Index">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</row>

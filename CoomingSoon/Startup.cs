@@ -1,5 +1,6 @@
 using CoomingSoon.DAL;
 using CoomingSoon.Models;
+using CoomingSoon.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,8 @@ namespace CoomingSoon
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<LayoutServices>();
+
             services.AddControllersWithViews();
 
             services.AddDbContext<AppDbContext>(options =>

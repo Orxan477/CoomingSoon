@@ -7,5 +7,7 @@ namespace CoomingSoon.ViewModel
     {
         public List<RightOption> RightOptions { get; set; }
         public Info Info { get; set; }
+        public Subscribe Subscribe { get; set; }
+        public Contact Contact { get; set; }
     }
 }

@@ -8382,11 +8382,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orxan477\\source\\repos\\CoomingSoon\\CoomingSoon\\CoomingSoon.csproj",
+      "projectUniqueName": "D:\\HP\\Documents\\Private\\Code Academy\\Back-End\\ASP.Net\\CoomingSoon\\CoomingSoon\\CoomingSoon.csproj",
       "projectName": "CoomingSoon",
-      "projectPath": "C:\\Users\\Orxan477\\source\\repos\\CoomingSoon\\CoomingSoon\\CoomingSoon.csproj",
+      "projectPath": "D:\\HP\\Documents\\Private\\Code Academy\\Back-End\\ASP.Net\\CoomingSoon\\CoomingSoon\\CoomingSoon.csproj",
       "packagesPath": "C:\\Users\\Orxan477\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orxan477\\source\\repos\\CoomingSoon\\CoomingSoon\\obj\\",
+      "outputPath": "D:\\HP\\Documents\\Private\\Code Academy\\Back-End\\ASP.Net\\CoomingSoon\\CoomingSoon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

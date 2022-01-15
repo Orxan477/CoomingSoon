@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7cqpEBfHP5mJFDVbEIgVW9IgALQ//r9LF9akcBwJzCZyfGI+O7DvNnYE8md+UxTfgTv002/ShuCBaRAAOL2b/g==",
+  "dgSpecHash": "3UkJhBmkWno8yZCsiabOw+XJ32wFaEN7xwp54MxbHHfmRnMbSiAb9WYBZcodlF1R08FnQbvCSdGoeP52VuklcA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Orxan477\\source\\repos\\CoomingSoon\\CoomingSoon\\CoomingSoon.csproj",
+  "projectFilePath": "D:\\HP\\Documents\\Private\\Code Academy\\Back-End\\ASP.Net\\CoomingSoon\\CoomingSoon\\CoomingSoon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Orxan477\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.0\\microsoft.aspnetcore.cryptography.internal.3.1.0.nupkg.sha512",
     "C:\\Users\\Orxan477\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.0\\microsoft.aspnetcore.cryptography.keyderivation.3.1.0.nupkg.sha512",

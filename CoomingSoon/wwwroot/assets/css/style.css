@@ -45,6 +45,9 @@ body::before{
 .cardTime span{
     display: block;
 }
+#subscribe input {
+    height: 100%;
+}
 #subscribe h4{
     color: white;
     font-size: 25px;
@@ -115,9 +118,7 @@ body::before{
 }
 #Contact input{
     font-size: 20px;
-    /*background-color: rgba(0, 0, 0, 0.24);*/
     border: none;
-    color: white;
 }
 .tran{
     background-color: rgba(0, 0, 0, 0.288);

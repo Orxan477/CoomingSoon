@@ -1,43 +1,74 @@
-(function () {
-    const second = 1000,
-          minute = second * 60,
-          hour = minute * 60,
-          day = hour * 24;
-  
-    //I'm adding this section so I don't have to keep updating this pen every year :-)
-    //remove this if you don't need it
-    let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "09/30/",
-        birthday = dayMonth + yyyy;
-    
-    today = mm + "/" + dd + "/" + yyyy;
-    if (today > birthday) {
-      birthday = dayMonth + nextYear;
+(function ($) {
+    "use strict";
+    $.fn.aksCountDown = function (options) {
+        const aks = $(this);
+        var settings = $.extend(
+            {
+                endTime: "",
+                refresh: 1000,
+                onEnd: function () { }
+            },
+            options
+        );
+        return this.each(function (i) {
+            function endTimeCheck(d1, d2) {
+                return (
+                    d1.getFullYear() === d2.getFullYear() &&
+                    d1.getMonth() === d2.getMonth() &&
+                    d1.getDate() === d2.getDate()
+                );
+            }
+            function countTimer() {
+                var endTime = new Date(settings.endTime);
+                endTime = Date.parse(endTime) / 1000;
+
+                var now = new Date();
+                now = Date.parse(now) / 1000;
+
+                var timeLeft = endTime - now;
+
+                var days = Math.floor(timeLeft / 86400);
+                var hours = Math.floor((timeLeft - days * 86400) / 3600);
+                var minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
+                var seconds = Math.floor(
+                    timeLeft - days * 86400 - hours * 3600 - minutes * 60
+                );
+
+                if (hours < "10") {
+                    hours = "0" + hours;
+                }
+                if (minutes < "10") {
+                    minutes = "0" + minutes;
+                }
+                if (seconds < "10") {
+                    seconds = "0" + seconds;
+                }
+
+                $(aks).find("[data-days]").html(days);
+                $(aks).find("[data-hours]").html(hours);
+                $(aks).find("[data-minutes]").html(minutes);
+                $(aks).find("[data-seconds]").html(seconds);
+            }
+            var now = new Date();
+            var endTime = new Date(settings.endTime);
+
+            if (endTimeCheck(now, endTime) === true) {
+                settings.onEnd.call(aks);
+            } else {
+                setInterval(function () {
+                    countTimer();
+                }, settings.refresh);
+            }
+        });
+    };
+})(jQuery);
+
+let str = $("#timerTime").val();
+console.log(str);
+
+$("#timer").aksCountDown({
+    endTime: str,
+    onEnd: function () {
+        $(this).html('<div class="timer-end">Finished Time</div>');
     }
-    //end
-    
-    const countDown = new Date(birthday).getTime(),
-        x = setInterval(function() {    
-  
-          const now = new Date().getTime(),
-                distance = countDown - now;
-  
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
-            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-  
-          //do something later when date is reached
-          if (distance < 0) {
-            document.getElementById("headline").innerText = "It's my birthday!";
-            document.getElementById("countdown").style.display = "none";
-            document.getElementById("content").style.display = "block";
-            clearInterval(x);
-          }
-          //seconds
-        }, 0)
-    }());
+});

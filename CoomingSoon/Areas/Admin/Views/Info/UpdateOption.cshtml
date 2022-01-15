@@ -1,0 +1,23 @@
+﻿@model RightOption
+@{
+    ViewData["Title"] = "Update";
+}
+
+<row>
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update</h4>
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label asp-for="Option"></label>
+                        <input asp-for="Option" class="form-control" >
+                        <span class="text-danger" asp-validation-for="Option"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-dark" asp-action="Index">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</row>
