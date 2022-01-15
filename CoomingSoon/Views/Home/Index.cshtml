@@ -1,0 +1,167 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="time">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="head">
+                        <h1>CoomingSoon</h1>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center">
+                    <div class="content">
+                        <h2>We're working hard to improve our website and we'll ready to launch after</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center mt-5">
+                    <div class="cardTime"><span id="days"></span>DAYS</div>
+                    <div class="cardTime"><span id="hours"></span>HOURS</div>
+                    <div class="cardTime"><span id="minutes"></span>MINUTES</div>
+                    <div class="cardTime"><span id="seconds"></span>SECONDS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center mt-5">
+                    <h4>Subscribe now to get the latest updates!</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center mt-3">
+                    <div class="back">
+                        <input type="text" size="44">
+                    </div>
+                    <button class="btn btn-danger">Subscribe</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center mt-4">
+                    <ul class="d-flex">
+                        <li><a href=""><i class="fab fa-twitter sub"></i></a></li>
+                        <li><a href=""><i class="fab fa-facebook sub"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram sub"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin sub"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Info" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 left">
+                    <h1>@Model.Info.LeftHead</h1>
+                    <h3>
+                        @Model.Info.LeftContent
+                    </h3>
+                </div>
+                <div class="col-lg-6 right">
+                    <p>
+                        @Model.Info.RightContent
+                    </p>
+                    <ul>
+                        @foreach (var option in Model.RightOptions)
+	{
+                        <li>
+                            <i class="fas fa-check check"></i>@option.Option
+                        </li>
+	}
+                    </ul>
+                    <p class="italic">
+                       @Model.Info.RightDownContent
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contact" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 d-flex justify-content-center ">
+                    <h2>Contact US</h2>
+                </div>
+            </div>
+            <div class="class">
+                <div class="col-lg-12">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-4 about">
+                            <div class="card-body">
+                                <i class="fas fa-map-marker-alt"></i> <span>Location:</span>
+                                <ul>
+                                    <li>A108 Adam Street</li>
+                                    <li>New York, NY 535022</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 about">
+                            <div class="card-body">
+                                <i class="fas fa-map-marker-alt"></i> <span>Email:</span>
+                                <ul>
+                                    <li>info@example.com</li>
+                                    <li>contact@example.com</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 about">
+                            <div class="card-body">
+                                <i class="fas fa-map-marker-alt"></i> <span>Call:</span>
+                                <ul>
+                                    <li>+1 5589 55488 51</li>
+                                    <li>+1 5589 22475 14</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4 d-flex justify-content-center ">
+                    <form method="post">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" size="20" placeholder="Your Name">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" size="20" placeholder="Your Email">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <input type="text" placeholder="Subject" size="50">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <input type="text" placeholder="Message" size="50">
+                                </div>
+                            </div>
+                            <div class="row mt-3 ">
+                                <div class="col-lg-12 d-flex justify-content-center">
+                                    <button class="btn btn-danger">Send Message</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+</main>
+

@@ -1,0 +1,159 @@
+body{
+    position: relative;
+    background-image: url("/assets/img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+}
+body::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(39, 37, 37);
+    opacity: 0.7;
+}
+#time{
+    padding-top: 7%;
+}
+#time h1{
+    color: white;
+    display: block;
+}
+#time h2{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.cardTime{
+    width: 100px;
+    height: 120px;
+    background-color: rgba(192, 192, 192, 0.295);
+    border-top: 5px solid red;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+
+}
+.cardTime span{
+    display: block;
+}
+#subscribe h4{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+#subscribe button{
+    background-color: red;
+}
+#subscribe ul{
+    list-style: none;
+    padding: 0;
+}
+.sub{
+    color: thistle;
+    font-size: 25px;
+    margin: 0 12px;
+    transition: .3s;
+}
+.sub:hover{
+    color: white;
+}
+#Info .left h1{
+    color: white;
+    font-weight: bold;
+    line-height: 50px;
+    word-spacing: 10px;
+    margin-bottom: 20px;
+}
+#Info .left h3{
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+}
+#Info .right p{
+    color: white;
+    font-size:17px;
+    margin-bottom: 25px;
+}
+#Info ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+#Info ul li{
+    margin: 20px 0;
+}
+.check{
+    color: red;
+    margin-right: 10px;
+    font-size: 12px;
+}
+#Info .italic{
+    font-style: italic;
+}
+#Contact h2{
+    color: white;
+    font-weight: 700;
+}
+#Contact button{
+    background-color: red;
+    transition: .3s;
+    border: none;
+}
+#Contact button:hover{
+    background-color: rgb(139, 31, 31);
+    border: none;
+}
+#Contact input{
+    font-size: 20px;
+    /*background-color: rgba(0, 0, 0, 0.24);*/
+    border: none;
+    color: white;
+}
+.tran{
+    background-color: rgba(0, 0, 0, 0.288);
+}
+#Contact ul{
+    list-style: none;
+    padding: 0;
+    margin-left: 37px;
+    color: white;
+}
+.about{
+    color: white;
+    font-size: 18px;
+}
+.about i{
+    padding: 10px;
+    background-color: rgba(63, 61, 61, 0.527);
+    border-radius: 50%;
+}
+.about span{
+    font-size: 25px;
+}
+.about li{
+    font-size: 15px;
+}
+#footer p{
+    color: white;
+    font-size: 15px;
+}
+#footer a{
+    color: red;
+}
+#footer .down p{
+    font-size: 14px;
+    font-weight: 300;
+}
+.class {
+    background-color: rgba(192, 192, 192, 0.582);
+}
